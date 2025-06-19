@@ -1,4 +1,6 @@
 import pandas as pd
 
 def load_data(filepath="data\titanic.csv"):
-    return pd.read_csv(filepath)
+    df = pd.read_csv(filepath)
+    df = df[df["sex"] == "male"]
+    return df
