@@ -20,7 +20,6 @@ def clean_data(df):
     """
     
     #df_cleaned = df.dropna()
-    for col in df_cleaned.select_dtypes(include="object").columns:
-        df_cleaned[col] = df_cleaned[col].str.lower()
+    df['embarked'] = df["embarked"].str.lower()
 
-    return df_cleaned
+    return df
